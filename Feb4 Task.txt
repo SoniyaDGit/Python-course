@@ -1,0 +1,338 @@
+Task1:
+Get one string from user
+identify the middle character of the string
+
+Program:
+String_input=input("Please enter a string: ")
+print("The String name is:  ",String_input)
+String_length=len(String_input)
+print("The length of the string is: ",String_length)
+MiddleNumber=int((String_length)/2)
+print("The Middle number of full string is: ",MiddleNumber)
+print("The Middle Character of the string is: ",(String_input[MiddleNumber]))
+
+
+Output:
+Please enter a string: PythonClass
+The String name is:   PythonClass
+The length of the string is:  11
+The Middle number of full string is:  5
+The Middle Character of the string is:  n
+>>> 
+
+---------------------------------------------------------------------------------------------------------------
+Task 2:
+
+string1: ***python***
+string1: **python********
+string: ********java*******
+output: python  (strip,rstrip,lstrip method *)
+
+Program:
+StringInput1=input("Please enter a string input 1: ")
+StringInput2=input("Please enter a string input 2: ")
+StringInput3=input("Please enter a string input 3: ")
+print("The output is: ", StringInput1.strip("*"))
+print("The output is: ", StringInput2.rstrip("*"))
+print("The output is: ", StringInput3.lstrip("*"))
+
+Output:
+Please enter a string input: ***python***
+Please enter a string input: **python********
+Please enter a string input: ********java*******
+python
+**python
+java*******
+>>> 
+
+-------------------------------------------------------------------------------------------------------------------------
+Task3: 
+(name<space>float)
+collect three strings from user  name<space>float
+string1: "ravi 10.30"  
+string2: "meghala 12.19"
+string3: "Gokul 20.20"
+split + indexing
+10.30 + 12.19 + 20.20 ===> output ===> add it 42.69
+
+Program:
+String_Input1=input("Please enter the student name and score: ")
+String_Input2=input("please enter the student name and score: ")
+String_Input3=input("please enter the student name and score: ")
+print(String_Input1)
+print(String_Input2)
+print(String_Input3)
+Index1=String_Input1.split(" ")
+Index2=String_Input2.split(" ")
+Index3=String_Input3.split(" ")
+print("The Indexed values of String_Input1 is: ",Index1)
+print("The Indexed values of String_Input2 is: ",Index2)
+print("The Indexed values of String_Input3 is: ",Index3)
+Total=float(Index1[1])+float(Index2[1])+float(Index3[1])
+print("Total marks scored by students:" ,Total)
+
+
+Output:
+Please enter the student name and score: ravi 10.30
+please enter the student name and score: meghala 12.19
+please enter the student name and score: gokul 20.20
+ravi 10.30
+meghala 12.19
+gokul 20.20
+The Indexed values of String_Input1 is:  ['ravi', '10.30']
+The Indexed values of String_Input2 is:  ['meghala', '12.19']
+The Indexed values of String_Input3 is:  ['gokul', '20.20']
+Total marks scored by students: 42.69
+>>>
+
+-------------------------------------------------------------------------------------------------------------------------
+Task 4:
+#collect two strings from user
+string1: python
+String2: java
+output ===> jythonpava64hv
+
+Program:
+S1=input("Please enter the string1: ")
+S2=input("Please enter the string2: ")
+#list1=list(S1)
+#list2=list(S2)
+list3=S2[0]+S1[1:]+S1[0]+S2[1:]
+list4=str(list3)
+print(list4)                                  #prints jythonpava
+length_list1=len(S1)
+l1=(length_list1)                          #6 length of python
+length_list2=len(S2)
+l2=(length_list2)                          #4 length of java
+l3=str(l1)+str(l2)
+print("The length of S1 and S2 is:", l3)       # prints [6,4]
+strlen1=len(S1)
+middlenum1=int(strlen1/2)
+s1m=(S1[middlenum1])
+print("The middle char of S1 is:" ,s1m)        #prints h (middle letter of S1)
+strlen2=len(S2)
+middlenum2=int(strlen2/2)
+s2m=(S2[middlenum2])
+print("The middle char of S2 is:" ,s2m)        #prints v (middle letter of S1)
+op=(list4+l3+s1m+s2m)
+print("The output is: ",op)                   #prints output in list string format
+
+
+Output:
+Please enter the string1: python
+Please enter the string2: java
+jythonpava
+The length of S1 and S2 is: 64
+The middle char of S1 is: h
+The middle char of S2 is: v
+The output is:  jythonpava64hv
+>>> 
+Please enter the string1: maths
+Please enter the string2: science
+sathsmcience
+The length of S1 and S2 is: 57
+The middle char of S1 is: t
+The middle char of S2 is: e
+The output is:  sathsmcience57te
+>>> 
+
+------------------------------------------------------------------------------------------------------------------------
+Task 5:
+Collect two strings from user
+string1: wikipedia
+string2: typescript
+output: p  +  c   ===> ascii value of p + ascii value of c  ====>  198
+(ord , chr)
+
+Program:
+#To print ascii value of middle char
+str1=input("Please enter the string 1: ")
+str2=input("Please enter the string 2: ")
+string1_length=(len(str1))
+string2_length=(len(str2))
+print("The length of string1 is: ",string1_length)
+print("The length of string2 is: ",string2_length)
+middle_num1=int(string1_length/2)
+middle_num2=int(string2_length/2)
+print("The middle number of string1 length is: ",middle_num1)
+print("The middle number of string2 length is: ",middle_num2)
+middle_char1=(str1[middle_num1])
+middle_char2=(str2[middle_num2])
+print(middle_char1)
+print(middle_char2)
+Ascii1=ord(middle_char1)
+Ascii2=ord(middle_char2)
+print("the ascii value of middle_char1 is: ", Ascii1)
+print("the ascii value of middle_char2 is: ", Ascii2)
+Total=print("The Ascii value of P and C is : ", Ascii1+Ascii2)
+
+Output:
+Please enter the string 1: wikipedia
+Please enter the string 2: typescript
+The length of string1 is:  9
+The length of string2 is:  10
+The middle number of string1 length is:  4
+The middle number of string2 length is:  5
+p
+c
+the ascii value of middle_char1 is:  112
+the ascii value of middle_char2 is:  99
+The Ascii value of P and C is :  211
+>>> 
+--------------------------------------------------------------------------------------------------------------------------------------
+Task 6:
+collect one string from user:
+string: computer
+output: c6r
+string: mathematics
+output: m9s
+
+Program:
+S1=input("enter string1:")
+InbetweenChar=S1[1:-1]
+length=len(InbetweenChar)
+length1=str(length)
+print(type(length1))
+list1=S1[0]+length1+S1[-1]
+print(list1)
+
+Output:
+enter string1:computer
+6
+<class 'str'>
+c6r
+>>> 
+enter string1:mathematics
+<class 'str'>
+m9s
+>>> 
+
+-----------------------------------------------------------------------------------------------------------------------------
+Task 7:
+Say hello world with python
+Hackerrank task completed
+Program:
+ s=("Hello, World!")
+   print(s)
+
+Output:
+Your Output (stdout)
+Hello, World!
+Expected Output
+Hello, World!
+
+-----------------------------------------------------------------------------------------------------------------------------
+Task 8:
+swapcase
+Hackerrank task completed
+Program:
+def swap_case(Input_string):
+    a=Input_string.swapcase() 
+    return a
+
+output:
+Input (stdin)
+HackerRank.com presents "Pythonist 2".
+Your Output (stdout)
+hACKERrANK.COM PRESENTS "pYTHONIST 2".
+Expected Output
+hACKERrANK.COM PRESENTS "pYTHONIST 2".
+---------------------------------------------------------------------------------------------------------------------------
+Task 9: 
+what's your name
+Hackerrank task completed
+Program:
+def print_full_name(first, last):
+    a=str(first)
+    b=str(last)
+    print("Hello {} {}! You just delved into python.".format(a,b))
+
+output:
+Input (stdin)
+Ross
+Taylor
+Your Output (stdout)
+Hello Ross Taylor! You just delved into python.
+Expected Output
+Hello Ross Taylor! You just delved into python.
+----------------------------------------------------------------------------------------------------------------------------
+Task 10:
+Mutation
+Hackerrank Program:
+def mutate_string(string, position, character):
+    string="abracadabra"
+    list1=list(string)
+    list1[5]="k"
+    string= " ''.join(list1)
+    return string
+
+Output:
+Input (stdin)
+abracadabra
+5 k
+Your Output (stdout)
+abrackdabra
+Expected Output
+abrackdabra
+
+IDLE PROGRAM:
+string=input("Enter the string: ")
+list1=list(string)
+list1[5]='k'
+string= " ".join(list1)
+print(string)
+
+Output:
+Enter the string: abracadabra
+a b r a c k d a b r a
+>>> 
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Task 11:
+Arithmetic Operators
+a = int(raw_input())
+b = int(raw_input())
+Sum=(a+b)
+Sub=(a-b)
+Mul=(a*b)
+print(Sum)
+print(Sub)
+print(Mul)
+
+Compiler Message
+Success
+Input (stdin)
+3
+2
+Expected Output
+5
+1
+6
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Task 12:
+
+Python Division
+a = int(raw_input())
+b = int(raw_input())
+Div1=(a//b)
+Div2=(a/b)
+print(Div1)
+print(Div2)
+
+Hackerrank code:
+from __future__ import division
+#if __name__ == '__main__':
+a = int(raw_input())
+b = int(raw_input())
+Div1=(a//b)
+Div2=(a/b)
+print(Div1)
+print(Div2)
+
+Input (stdin)
+4
+3
+Your Output (stdout)
+1
+1.33333333333
+
