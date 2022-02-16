@@ -1,0 +1,73 @@
+Tuple
+
+#Create two tuples (1,4,5,6,7,8) (5,6,7,8,9)
+
+Program:
+Tup1=(1,4,5,6,7,8)
+Tup2=(5,6,7,8,9)
+print(type(Tup1))
+print(type(Tup2))
+
+Output:
+<class 'tuple'>
+<class 'tuple'>
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------
+#Find the common elements between two tuples
+
+Program:
+Tup1=(1,4,5,6,7,8)
+Tup2=(5,6,7,8,9)
+Tup3=set(Tup1)
+Tup4=set(Tup2)
+Common=(Tup3&Tup4)
+print("The common elements in two Tuples are: ", Common)
+
+Output:
+The common elements in two Tuples are:  {8, 5, 6, 7}
+>>>
+---------------------------------------------------------------------------------------------------------------------------------
+#Concatenate both tuples and remove duplicates from tuple
+
+Program:
+ Tup1=(1,4,5,6,7,8)
+Tup2=(5,6,7,8,9)
+Tup3=Tup1+Tup2
+print("The Concatenation of Tup1 and Tup2 is: ",Tup3)
+Tup4=set(Tup3)
+print("The Tuple without Duplicate elements: ", Tup4)
+
+Output:
+The Concatenation of Tup1 and Tup2 is:  (1, 4, 5, 6, 7, 8, 5, 6, 7, 8, 9)
+The Tuple without Duplicate elements:  {1, 4, 5, 6, 7, 8, 9}
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------
+#Find the index value of 9 (after concatenation)
+
+Program:
+Tup1=(1,4,5,6,7,8)
+Tup2=(5,6,7,8,9)
+Tup3=Tup1+Tup2
+print("The Concatenation of Tup1 and Tup2 is: ",Tup3)
+print("The Index position of 9 is: ",Tup3.index(9))
+
+Output:
+The Concatenation of Tup1 and Tup2 is:  (1, 4, 5, 6, 7, 8, 5, 6, 7, 8, 9)
+The Index position of 9 is:  10
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------
+#multiply above elements 3 times
+
+Program:
+Tup1=(1,4,5,6,7,8)
+Tup2=(5,6,7,8,9)
+Tup3=Tup1+Tup2
+print("The Concatenation of Tup1 and Tup2 is: ",Tup3)
+Tup4=(Tup3)*3
+print(Tup4)
+
+Output:
+The Concatenation of Tup1 and Tup2 is:  (1, 4, 5, 6, 7, 8, 5, 6, 7, 8, 9)
+(1, 4, 5, 6, 7, 8, 5, 6, 7, 8, 9, 1, 4, 5, 6, 7, 8, 5, 6, 7, 8, 9, 1, 4, 5, 6, 7, 8, 5, 6, 7, 8, 9)
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------
