@@ -1,0 +1,135 @@
+List
+
+#Create an empty list (two ways)
+
+Program:
+list1=[]
+print(type(list1))
+list2=list()
+print(type(list2))
+
+Output:
+<class 'list'>
+<class 'list'>
+>>> 
+----------------------------------------------------------------------------------------------------------------------------------
+#Concatenate with [5,6,7,8]
+
+Program:
+List1=[]
+List2=[5,6,7,8]
+print(List1+List2)
+
+Output:
+[5, 6, 7, 8]
+>>> 
+----------------------------------------------------------------------------------------------------------------------------------
+#add 8,9,1,5,6,7,8,1 elements to that list
+
+Program:
+List1=[5,6,7,8]
+List2=[8,9,1,5,6,7,8,1]
+List1.extend(List2)
+print(List1)
+
+Output:
+[5, 6, 7, 8, 8, 9, 1, 5, 6, 7, 8, 1]
+>>> 
+
+----------------------------------------------------------------------------------------------------------------------------------
+#Find frequency of 8 (count)
+
+Program:
+List1=[5,6,7,8]
+List2=[8,9,1,5,6,7,8,1]
+List1.extend(List2)
+print(List1)                       
+print("The frequency of 8 is: ",List1.count(8))
+
+Output:
+[5, 6, 7, 8, 8, 9, 1, 5, 6, 7, 8, 1]
+The frequency of 8 is:  3
+>>> 
+----------------------------------------------------------------------------------------------------------------------------------
+#find the mean of the list
+
+Program:
+List1=[5,6,7,8,8,9,1,5,6,7,8,1]
+Sum_value=sum(List1)
+Length=len(List1)
+Mean=Sum_value/Length
+print("The Mean value of list is: ",Mean)
+
+Output:
+The Mean value of list is:  5.916666666666667
+>>> 
+----------------------------------------------------------------------------------------------------------------------------------
+#find sum (List) + min + Max
+
+Program:
+List1=[5,6,7,8,8,9,1,5,6,7,8,1]
+print("The Sum value of list is: ", sum(List1))
+print("The Minimum value in list is: ",min(List1))
+print("The Maximum value in list is: ",max(List1))
+
+Output:
+The Sum value of list is:  71
+The Minimum value in list is:  1
+The Maximum value in list is:  9
+>>> 
+----------------------------------------------------------------------------------------------------------------------------------
+#Find median of the list
+
+Program: ### Input as ODD number
+
+List1= [5,6,7,8,8,9,11,1,5,6,7,8,1]
+Length=len(List1)
+List1.sort()
+print(List1)
+if Length % 2 == 0:
+    middle1=List1[Length//2]
+    middle2=List1[Length//2 - 1]
+    median=(middle1+middle2)/2
+else:
+    median=List1[Length//2]
+    print(median)
+
+Output:
+[1, 1, 5, 5, 6, 6, 7, 7, 8, 8, 8, 9, 11]
+7
+>>> 
+
+Program: ### Input as EVEN number
+
+List1= [5,6,7,8,8,9,1,5,6,7,8,1]
+Length=len(List1)
+List1.sort()
+print(List1)
+if Length % 2 == 0:
+    middle1=List1[Length//2]
+    middle2=List1[Length//2 - 1]
+    median=(middle1+middle2)/2
+else:
+    median=List1[Length//2]
+    print(median)
+
+Output:
+[1, 1, 5, 5, 6, 6, 7, 7, 8, 8, 8, 9]
+6.5
+>>> 
+------------------------------------------------------------------------------------------------------------------------------
+#remove duplicates from list and give output in the format of tuple
+
+Program:
+List1=[5,6,7,8,8,9,1,5,6,7,8,1]
+print("The List input is: " ,List1)
+List1=set(List1)
+print("The List after removing duplicates: ",List1)
+List2=tuple(List1)
+print("The Output of List after duplicate removal in the format of Tuple: ",List2)
+
+Output:
+The List input is:  [5, 6, 7, 8, 8, 9, 1, 5, 6, 7, 8, 1]
+The List after removing duplicates:  {1, 5, 6, 7, 8, 9}
+The Output of List after duplicate removal in the format of Tuple:  (1, 5, 6, 7, 8, 9)
+>>> 
