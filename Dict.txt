@@ -1,0 +1,88 @@
+Dict (Feb 9)
+
+#create a dictionary
+
+Program:
+Dict1={}
+print(type(Dict1))
+Dict2=dict()
+print(type(Dict2))
+
+Output:
+<class 'dict'>
+<class 'dict'>
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+#{1:["english","maths","science"], 2:[10,20,30], 3:["bio-botany","bio-zoology","Algebra"]}
+
+
+Program:
+Dict1={}
+Dict1[1]=["english","maths","science"]
+Dict1[2]=[10,20,30]
+Dict1[3]=["bio-botany","bio-zoology","Algebra"]
+print(Dict1)
+
+Output:
+{1: ['english', 'maths', 'science'], 2: [10, 20, 30], 3: ['bio-botany', 'bio-zoology', 'Algebra']}
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+#Extract "bobtn" from above dictionary
+
+Program:
+Dict1={}
+Dict1[1]=["english","maths","science"]
+Dict1[2]=[10,20,30]
+Dict1[3]=["bio-botany","bio-zoology","Algebra"]
+x=Dict1[3]
+y=x[0]
+print(y[0::2])
+
+Output:
+bobtn
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+#Extract "arbeg" from above dictionary
+
+Program:
+Dict1={}
+Dict1[1]=["english","maths","science"]
+Dict1[2]=[10,20,30]
+Dict1[3]=["bio-botany","bio-zoology","Algebra"]
+X=Dict1[3]
+Y=X[2]
+print(Y[-1:-6:-1])
+
+Output:
+arbeg
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+#print all keys in dictionary and convert it into tuple
+
+Program:
+Dict1={}
+Dict1[1]=["english","maths","science"]
+Dict1[2]=[10,20,30]
+Dict1[3]=["bio-botany","bio-zoology","Algebra"]
+X=Dict1.keys()
+Y=tuple(X)
+print(Y)
+
+Output:
+(1, 2, 3)
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+#Find the average of all numbers available under key "2"
+
+Program:
+Dict1={}
+Dict1[1]=["english","maths","science"]
+Dict1[2]=[10,20,30]
+Dict1[3]=["bio-botany","bio-zoology","Algebra"]
+X=Dict1[2]
+print(sum(X)/len(X))
+
+Output:
+20.0
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------
