@@ -1,0 +1,113 @@
+ Sets
+
+#Create two empty sets
+
+Program:
+Set1=set()
+Set2=set()
+print(type(Set1))
+print(type(Set2))
+
+Output:
+<class 'set'>
+<class 'set'>
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------
+#update set1 with 7,8,9,1,2,3,4,5,0
+
+Program:
+Set1=set()
+Set2=set()
+Set3={7,8,9,1,2,3,4,5,0}
+Set1.update(Set3)
+print(Set1)
+
+Output:
+{0, 1, 2, 3, 4, 5, 7, 8, 9}
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------
+#update set2 with 4,5,6,0
+
+Program:
+Set1=set()
+Set2=set()
+Set3={7,8,9,1,2,3,4,5,0}
+Set1.update(Set3)
+print(Set1)
+Set4={4,5,6,0}
+Set2.update(Set4)
+print(Set2)
+
+Output:
+{0, 1, 2, 3, 4, 5, 7, 8, 9}
+{0, 4, 5, 6}
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------
+#check whether set2 is subset of set1 or no ?
+
+Program:
+Set1={7,8,9,1,2,3,4,5,0}
+Set2={4,5,6,0}
+print(Set2.issubset(Set1))
+
+Output:
+False
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------
+#check whether both have common elements are no ?
+
+Program:
+Set1={7,8,9,1,2,3,4,5,0}
+Set2={4,5,6,0}
+print((Set1)&(Set2))
+
+Output:
+{0, 4, 5}
+>>>
+-----------------------------------------------------------------------------------------------------------------------------------
+#remove 8 from set 1 and set 2 ==> find the inferences
+
+Program:
+Set1={7,8,9,1,2,3,4,5,0}
+Set2={4,5,6,0}
+print(Set1)
+print(Set2)
+Set1.remove(8)
+print(Set1)
+Set2.remove(8)
+print(Set2)
+
+Output:
+{0, 1, 2, 3, 4, 5, 7, 9}
+Traceback (most recent call last):
+  File "C:/Users/6113275/OneDrive - Thomson Reuters Incorporated/Documents/BES/Prabhakar python/Tasks/sets.py", line 7, in <module>
+    Set2.remove(8)
+KeyError: 8
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------
+#discard 0 from set1 and set2 
+
+Program:
+Set1={7,8,9,1,2,3,4,5,0}
+Set2={4,5,6,0}
+print(Set1)
+print(Set2)
+Set1.discard(0)
+print(Set1)
+Set2.discard(0)
+print(Set2)
+
+Output:
+{1, 2, 3, 4, 5, 7, 8, 9}
+{4, 5, 6}
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------
+#find collection of both sets ===> set1 and set2
+
+Program:
+
+Output:
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
