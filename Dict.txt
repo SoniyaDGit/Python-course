@@ -64,9 +64,8 @@ Dict1={}
 Dict1[1]=["english","maths","science"]
 Dict1[2]=[10,20,30]
 Dict1[3]=["bio-botany","bio-zoology","Algebra"]
-X=Dict1.keys()
-Y=tuple(X)
-print(Y)
+Dict1=tuple(Dict1.keys())
+print(Dict1)
 
 Output:
 (1, 2, 3)
