@@ -1,0 +1,202 @@
+#Task1
+#hackerrank Write a function
+
+
+Program:
+def is_leap(year):
+    if year % 4==0 and year % 100 != 0: 
+        leap=True
+    elif year%400==0:
+        leap=True
+    else:
+        leap=False
+    return leap
+
+IDLE:
+year=int(input("Enter the year: "))
+if year % 4==0 and year % 100 != 0: 
+    print("leap=True")
+elif year%400==0:
+    print("leap=True")
+else:
+    print("leap=False")
+
+Output:
+1990-false
+2400-true
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Task2:
+#hackerrank Python If-Else
+
+
+IDLE Program:
+n=int(input())
+if n%2!=0:
+    print("odd:weird")
+elif n>2 and n<=5:
+    print("even and inbetween 2 and 5:not weird")
+elif n>6 and n<=20:
+    print("even and inbetween 6 and 20:weird")
+elif n>20:
+    print("even and greater than 20:not weird")
+else:
+    print("weird")
+
+
+IDLE Output:
+1
+odd:weird
+>>> 
+3
+odd:weird
+>>> 
+4
+even and inbetween 2 and 5:not weird
+>>> 
+8
+even and inbetween 6 and 20:weird
+>>> 
+7
+odd:weird
+>>> 
+23
+odd:weird
+>>> 
+24
+even and greater than 20:not weird
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Task3
+
+#Fizz buzz
+#Get one number from user
+#Multiple of 3 ==> Fizz
+#Multiple of 5 ===> buzz
+#Multiple of 3 and 5 ===> Fizzbuzz
+#None ==> Invalid number
+
+
+Program:
+Input=int(input())
+if Input%3==0 and Input%5==0:
+    print("Fizzbuzz")
+elif Input%3==0:
+    print("Fizz")
+elif Input%5==0:
+    print("Buzz")
+else:
+    print("Invalid number")
+
+Output:
+10
+Buzz
+>>> 
+12
+Fizz
+>>> 
+15
+Fizzbuzz
+>>> 
+8
+Invalid number
+>>> 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task4:
+#Get one mark from student
+#mark 0 to 100 Valid otherwise invalid mark
+#50 + PASS otherwise FAIL
+#90 to 100 ===> A 
+#80 to 89 ===> B
+#70 to 79 ===> C
+#60 to 69 ===> D
+#50 to 59 ===> E
+#0 to 49 ===> FAIL
+
+
+Program:
+Mark=int(input())
+if Mark>0 and Mark<=100:
+    print("Valid mark")
+else:
+    print("invalid mark")
+if Mark>=50 and Mark<=100:
+    print("Pass")
+elif Mark>100:
+    print("No pass\Fail criteria for Invalid mark")
+else:
+    print("Fail")
+if Mark>=90 and Mark<=100:
+    print("Grade A")
+if Mark>=80 and Mark<=89:
+    print("Grade B")
+if Mark>=70 and Mark<=79:
+    print("Grade c")
+if Mark>=60 and Mark<=69:
+    print("Grade D")
+if Mark>=50 and Mark<=59:
+    print("Grade E")
+
+
+Output:
+65
+Valid mark
+Pass
+Grade D
+>>> 
+48
+Valid mark
+Fail
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 5:
+#collect three marks from user
+#calculate mark1 + mark2 + mark3 / 100
+if calculate > 90 ===> Grade A
+if calculate > 75 ==> Grade B
+calculate > 50  ==> grade C
+Other wise ===> Grade D
+
+
+Program:
+mark1=input("Enter the mark1: ")
+mark2=input("Enter the mark2: ")
+mark3=input("Enter the mark3: ")
+Total=(int(mark1)+int(mark2)+int(mark3))/3
+print(Total)
+if Total > 90:
+    print("Grade A")
+elif Total > 75:
+    print("Grade B")
+elif Total > 50:
+    print("Grade C")
+else:
+    print("Grade D")
+
+
+
+Output:
+Enter the mark1: 90
+Enter the mark2: 95
+Enter the mark3: 90
+91.66666666666667
+Grade A
+>>> 
+Enter the mark1: 90
+Enter the mark2: 79
+Enter the mark3: 59
+76.0
+Grade B
+>>> 
+Enter the mark1: 79
+Enter the mark2: 69
+Enter the mark3: 59
+69.0
+Grade C
+>>> 
+Enter the mark1: 25
+Enter the mark2: 25
+Enter the mark3: 25
+25.0
+Grade D
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
