@@ -1,0 +1,297 @@
+===============================
+Feb 16
+==============================
+
+Task1:
+
+#Using Range function  print multiples of 5 from 0 to 75
+
+Program:
+for i in range(0,75):
+    if i%5==0:
+        print(f'{i} :Multiple of Five')
+    else:
+        pass
+
+
+Output:
+0 :Multiple of Five
+5 :Multiple of Five
+10 :Multiple of Five
+15 :Multiple of Five
+20 :Multiple of Five
+25 :Multiple of Five
+30 :Multiple of Five
+35 :Multiple of Five
+40 :Multiple of Five
+45 :Multiple of Five
+50 :Multiple of Five
+55 :Multiple of Five
+60 :Multiple of Five
+65 :Multiple of Five
+70 :Multiple of Five
+>>> 
+
+#Using Range function  print multiples of 8 from 0 to 72
+
+Program:
+for i in range(0,72):
+    if i%8==0:
+        print(f"{i}:Multiple of Eight")
+    else:
+        pass
+
+Output:
+0:Multiple of Eight
+8:Multiple of Eight
+16:Multiple of Eight
+24:Multiple of Eight
+32:Multiple of Eight
+40:Multiple of Eight
+48:Multiple of Eight
+56:Multiple of Eight
+64:Multiple of Eight
+>>> 
+
+#Using Range function  print multiples of 5 from 75 to 0
+
+Program:
+for i in reversed(range(75,0,-1)):
+    if i%5==0:
+        print(f"{i}:Multiple of Five")
+    else:
+        pass
+
+
+Output:
+5:Multiple of Five
+10:Multiple of Five
+15:Multiple of Five
+20:Multiple of Five
+25:Multiple of Five
+30:Multiple of Five
+35:Multiple of Five
+40:Multiple of Five
+45:Multiple of Five
+50:Multiple of Five
+55:Multiple of Five
+60:Multiple of Five
+65:Multiple of Five
+70:Multiple of Five
+75:Multiple of Five
+>>> 
+
+#Using Range function  print multiples of 8 from 96 to 72
+
+Program:
+for i in reversed(range(96,72,-1)):
+    if i%8==0:
+        print(f"{i}:Multiple of Eight")
+    else:
+        pass
+
+
+Output:
+80:Multiple of Eight
+88:Multiple of Eight
+96:Multiple of Eight
+>>>
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task2:
+
+Get a dynamic list from user
+
+Program:
+li1=[]
+num=int(input())
+print("ENTER THE ELEMENTS")
+for i in range(0,num):
+    num1=int(input())
+    li1.append(num1)
+print(li1)
+
+
+Output:
+6
+ENTER THE ELEMENTS
+1
+2
+3
+4
+5
+6
+[1, 2, 3, 4, 5, 6]
+>>> 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task3:
+
+Get a dynamic dictionary from user
+
+clues Task2 and Task3
+#1. get number of elements from user
+#Loop through range
+#append to list/dicti
+
+
+Program:
+Dic1={}
+num=int(input())
+print("ENTER THE ELEMENTS")
+for i in range(num):
+    keys=int(input())
+    values=input()
+    Dic1[keys]=values
+    print(Dic1)
+
+Output:
+5
+ENTER THE ELEMENTS
+1
+c
+{1: 'c'}
+2
+cpp
+{1: 'c', 2: 'cpp'}
+3
+java
+{1: 'c', 2: 'cpp', 3: 'java'}
+4
+go
+{1: 'c', 2: 'cpp', 3: 'java', 4: 'go'}
+5
+python
+{1: 'c', 2: 'cpp', 3: 'java', 4: 'go', 5: 'python'}
+>>> 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task4:
+
+Get two integers from user
+print multiples of 8 between them
+
+clues:
+Use range function in for loop
+Use if condition inside for loop
+add in to list
+
+input 10 100
+multiples of 8
+
+[16,24,32.....,96]
+
+Program:
+num1=int(input())
+num2=int(input())
+output=[]
+for i in range(num1,num2):
+    if i%8==0:
+        output.append(i)
+print("Multiples of 8 are: ",output)
+        
+
+Output:
+10
+100
+Multiples of 8 are:  [16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96]
+>>> 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task5:
+Input:
+Li1 = [3,4,5,2,7,8,9,10]
+
+Output:
+Li_odd = [3,5,7,9]
+Li_even = [4,2,8,10]
+
+#Li1 = [3,4,5,2,7,8,9,10]
+
+
+Program:
+Li=[3,4,5,2,7,8,9,10]
+Li_odd=[]
+Li_even=[]
+for i in Li:
+    if i%2==0:
+        Li_even.append(i)
+print("even numbers are: ",Li_even)
+for i in Li:
+    if i%2!=0:
+        Li_odd.append(i)
+print("odd numbers are: ",Li_odd)
+
+Output:
+even numbers are:  [4, 2, 8, 10]
+odd numbers are:  [3, 5, 7, 9]
+>>> 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task6:
+
+Input: [-1, -7,8,10,20,21,17,28,-3,0,0,]
+    
+Output:
+neg_LI = [-1,-7,-3]
+pos_LI = []
+Zeros = []
+
+Numeber of postivie ele: 7
+Number nega: 3
+Number of zeros: 2
+
+
+Program:
+Li=[-1, -7,8,10,20,21,17,28,-3,0,0,]
+neg_LI=[]
+pos_LI=[]
+Zeros=[]
+for i in Li:  
+    if i>0:
+        pos_LI.append(i)
+    elif i==0:
+        Zeros.append(i)
+    else:
+        neg_LI.append(i)
+print("Number of Positive elements: ",len(pos_LI))
+print("Number of Negative elements: ",len(neg_LI))
+print("Number of Zeroes: ",len(Zeros))
+
+
+Output:
+Number of Positive elements:  6
+Number of Negative elements:  3
+Number of Zeroes:  2
+>>> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task7:
+
+Study range function and for loop properly
+
+
+print(list(range(5)))
+print(list(range(1,5)))
+print(list(range(5,20)))
+print(list(range(-5,5)))
+print(list(range(10,100,10)))
+print(list(range(10,0,-1)))
+print(list(range(-5,5,3)))
+print(list(range(10,100,5)))
+print(list(range(10,0,-2)))
+
+
+
+Output:
+[0, 1, 2, 3, 4]
+[1, 2, 3, 4]
+[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+[-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+[10, 20, 30, 40, 50, 60, 70, 80, 90]
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+[-5, -2, 1, 4]
+[10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
+[10, 8, 6, 4, 2]
+>>> 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
