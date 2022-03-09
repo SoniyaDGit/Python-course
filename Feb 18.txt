@@ -1,0 +1,412 @@
+1.Vars()---returns empty dict
+class student:
+    name="Soniya"
+    age="24"
+    country="India"
+x=vars(student)
+print(x)
+
+Output:
+{'__module__': '__main__', 'name': 'Soniya', 'age': '24', 'country': 'India', '__dict__': <attribute '__dict__' of 'student' objects>, '__weakref__': <attribute '__weakref__' of 'student' objects>, '__doc__': None}
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+2.zip() ----combines the values
+a=("Soniya",'Dinesh')
+b=('Devaraj','Ramani')
+x=zip(a,b)
+print(tuple(x))
+
+output:
+(('Soniya', 'Devaraj'), ('Dinesh', 'Ramani'))
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+3.sorted()
+a={5:"icecream",1:"chocolate",9:"chips",6:"gems"}
+x=sorted(a.items())
+print(x)
+
+Output:
+[(1, 'chocolate'), (5, 'icecream'), (6, 'gems'), (9, 'chips')]
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+4.slice()
+a=("a","b","c","d","e","f","g","h")
+x=slice(3)
+print(a[x])
+
+Output:
+('a', 'b', 'c')
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+5.setattr()
+class Student:
+    name= "Muthu"
+    age="35"
+    subject="Zoology"
+setattr(Student,"age",40)
+print(getattr(Student,"age"))
+
+Output:
+40
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+6.round()
+x=round(3.3333333333,3)
+print(x)
+
+Output:
+3.333
+>>>
+-----------------------------------------------------------------------------------------------------------------------------------------
+7.reversed()
+a=("a","b","c","d")
+b=reversed(a)
+for i in b:
+    print(i)
+    
+Output:
+d
+c
+b
+a
+>>>
+-----------------------------------------------------------------------------------------------------------------------------------------
+8.range()
+a=range(0,10)
+for i in a:
+    print(i)
+
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+9.pow()
+x=pow(2,5)
+print(x)
+
+Output:
+32
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+10.ord()
+a=ord("s")
+print(a)
+
+Output:
+115
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+11.map()
+def myfunc(a):
+    return len(a)
+x=map(myfunc,('apple','banana','cherry'))
+print(list(x))
+
+Output:
+[5, 6, 6]
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+12.isinstance()
+x = isinstance(5, int)
+print(x)
+
+Output:
+True
+>>> 
+x = isinstance(5, bool)
+print(x)
+
+False
+>>> 
+x = isinstance(5, float)
+print(x)
+
+False
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+13.eval()-- function evaluates the specified expression, if the expression is a legal Python statement, it will be executed.
+x = '55'
+print(eval(x))
+
+Output: 55
+-----------------------------------------------------------------------------------------------------------------------------------------
+14.enumerate()--- function adds a counter as the key of the enumerate object.
+a=('apple','banana','chickoo')
+b=enumerate(a)
+print(dict(b))
+
+Output:
+{0: 'apple', 1: 'banana', 2: 'chickoo'}
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+15. divmod() --returns a tuple containing the quotient  and the remainder
+a=divmod(50,3)
+print(a)
+
+Output:(16, 2)
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+16. complex()----Convert the number 1 and imaginary number 2 into a complex number
+a=complex(50,3)
+print(a)
+
+Output:(50+3j)
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+17. chr()----Returns a character from the specified Unicode code.
+a=chr(100)
+print(a)
+
+Output:d
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+18. byte()---convert objects into bytes objects
+x = bytes(4)
+print(x)
+
+Output:b'\x00\x00\x00\x00'
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+19. bin() --returns the binary version of a specified integer.
+x = bin(36)
+print(x)
+
+Output:0b100100
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+20. ascii()----returns a readable version of any object (Strings, Tuples, Lists, etc) , replace any non-ascii characters with escape characters:   å will be replaced with \xe5.
+
+a=ascii("My name is Soniyå")
+print(a)
+
+Output:
+'My name is Soniy\xe5'
+>>>
+-----------------------------------------------------------------------------------------------------------------------------------------
+Task1:
+Program:
+#Write function to concatenate three strings
+def concatstr(x,y,z):
+    return (x+y+z)
+print(concatstr("Hi","Welcome","Morning"))
+print(concatstr("Please","sit","down"))
+
+Output:
+HiWelcomeMorning
+Pleasesitdown
+>>>
+-----------------------------------------------------------------------------------------------------------------------------------------
+2.#Write a function multiply three different integers and return a int
+def mul3int(x,y,z):
+    return x*y*z
+print(mul3int(20,30,10))
+print(mul3int(5,2,3))
+
+Output:
+6000
+30
+-----------------------------------------------------------------------------------------------------------------------------------------
+3.#Write a function to return middle char of the string
+def middlechar(x):
+    length=len(x)
+    middle=(length//2)
+    return x[middle]
+middlechar("LordShivam")
+
+Output:
+'h'
+-----------------------------------------------------------------------------------------------------------------------------------------
+4.#write a function to return whether middle character is vowel or not
+def middlecharisvowel(x):
+    length=len(x)
+    middle=length//2
+    mchar=(x[middle])
+    vow={"a","e","i","o","u","A","E","I","O","U"}
+    if mchar in vow:
+        print(mchar,"Middle character is a vowel")
+    else:
+        print(mchar,"Middle character is not a vowel")
+middlecharisvowel("Anbeshivam")
+
+Output:
+h Middle character is not a vowel
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+Advance (7)
+
+1. whether the string is palindrome or not
+
+string1=input("Enter string: ")
+string2=string1[::-1]
+print(string2)
+if string1==string2:
+    print("The string is palindrome")
+else:
+    print("The string is not palindrome")
+
+Output:
+Enter string: reviver
+reviver
+The string is palindrome
+>>>
+Enter string: python
+nohtyp
+The string is not palindrome
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+#2. whether the number is armstrong or not
+def order(a):
+    n=0
+    while a!= 0:
+        n=n+1
+        a=a//10
+    return n
+def armstrong(a):
+    n=order(a)
+    temp=a
+    sum1=0
+    while(temp!=0):
+        r=temp%10
+        sum1=sum1+pow(r, n)
+        temp=temp//10
+    return(sum1==a)
+a=int(input("Enter a number: "))
+print(armstrong(a))
+
+Output:
+Enter a number: 153
+True
+>>> 
+Enter a number: 0
+True
+>>> 
+Enter a number: 1
+True
+>>> 
+Enter a number: 663
+False
+>>> 
+Enter a number: 2
+True
+>>> 
+Enter a number: 10
+False
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+#3. whether the number is prime or not
+def primeno(x):
+    if x>1:
+        for i in range(2,int(x/2)+1):
+            if x%i==0:
+                print(x,"is not a prime number")
+                break
+        else:
+            print(x,"is a prime number")
+    else:
+        print(x,"is not a prime number<1")
+primeno(int(input("Enter a number: ")))
+
+Output:
+Enter a number: 29
+29 is a prime number
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+#4.Find factorial of a number using function
+def factorial(x):
+    if x<0:
+        return 0
+    elif x==0 or x==1:
+        return 1
+    else:
+        fact=1
+        while x>1:
+            fact*=x
+            x-=1
+        return fact
+x=int(input("Enter a number: "))
+print("factorial of a number",x,"is",factorial(x))
+
+Output:
+Enter a number: 5
+factorial of a number 5 is 120
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+#5. Find factorial of a number using recursive function
+def factorialrecursive(x):
+    if x<0:
+        print("No Factorial for negative numbers")
+    elif x==0 or x==1:
+        print("1")
+    else:
+        fact=1
+        while x>1:
+            fact*=x
+            x-=1
+        return fact
+x=int(input("Enter a number: "))
+print("Factorial of", x, "is:",factorialrecursive(x))
+
+Output:
+Enter a number: 7
+Factorial of 7 is: 5040
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+#6. Find factorial of a number without using function
+x=int(input("Enter a number: "))
+fact=1
+if x<0:
+    print("No factorial for negative numbers") 
+elif x==0 or x==1:
+    print("1")
+else:
+    fact=1
+    for i in range(2,x+1):
+        fact=fact*i
+    print("factorial of",x,"is",fact)
+
+Output:
+Enter a number: 7
+Factorial of 7 is: 5040
+>>> 
+Enter a number: 0
+Factorial of 0 is: 1
+>>> 
+Enter a number: 1
+Factorial of 1 is: 1
+>>> 
+-----------------------------------------------------------------------------------------------------------------------------------------
+#7. Fibonacci series
+def fibonaccirecursive(x):
+   if x<=1:
+       return x
+   else:
+       return (fibonaccirecursive(x-1)+fibonaccirecursive(x-2))
+fibnum=int(input("Enter the number: "))
+if fibnum<=0:
+    print("No Fibonacci for negative number")
+else:
+    print("The Fibonacci series of",fibnum,"is")
+    for i in range(fibnum):
+        print(fibonaccirecursive(i))
+
+Output:
+Enter the number: 6
+The Fibonacci series of 6 is
+0
+1
+1
+2
+3
+5
+>>> 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
